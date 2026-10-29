@@ -173,4 +173,4 @@ dotnet run
 
 **Verde Encanto — Projeto Acadêmico de E-commerce**
 
-Desenvolvido para fins educacionais, com foco em desenvolvimento web utilizando ASP.NET Core MVC e C#.
+Renan Rodrigues Gerente de TI | Desenvolvedor de Software Instrutor de Educação Profissional III – SENAI SP Áreas: Educação, Desenvolvimento de Sistemas, Computação em Nuvem e IA
