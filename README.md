@@ -1,130 +1,75 @@
-# 🛒 Projeto Acadêmico – CRUD de E-commerce (ASP.NET Core MVC) | 🛒 Academic Project – E-commerce CRUD (ASP.NET Core MVC)
+[README.md](https://github.com/user-attachments/files/34107578/README.md)
+# Verde Encanto — E-commerce ASP.NET Core MVC
 
-# 📘 Sobre o Projeto | About the Project
-PT-BR 🇧🇷
-Este projeto consiste em um CRUD simples de E-commerce, desenvolvido com ASP.NET Core MVC, com finalidade exclusivamente educacional.
-Ele foi aplicado em sala de aula para alunos do curso técnico em Desenvolvimento de Sistemas, com o objetivo de apresentar, de forma prática, o fluxo básico de funcionamento de um sistema de E-commerce.
-O foco do projeto é didático, auxiliando os alunos a compreenderem conceitos fundamentais utilizados em sistemas web reais.
+Projeto criado a partir da base de e-commerce ASP.NET Core MVC fornecida pelo professor. A solução preserva a estrutura MVC, os modelos, os controladores, o Entity Framework Core e o SQL Server, com a identidade visual Verde Encanto baseada nas referências enviadas.
 
-EN 🇺🇸
-This project consists of a simple E-commerce CRUD application, developed using ASP.NET Core MVC, with an educational purpose only.
-It was applied in the classroom for students of a Technical Program in Systems Development, aiming to demonstrate, in practice, the basic workflow of an E-commerce system.
-The project has a didactic focus, helping students understand fundamental concepts used in real-world web systems.
+## Requisitos
+- .NET 9 SDK (o projeto original usa `net9.0`)
+- Visual Studio 2022 atualizado com a carga de trabalho **Desenvolvimento ASP.NET e Web**; ou Visual Studio Code com as extensões **C# Dev Kit** e **C#**
+- SQL Server LocalDB (instalado normalmente junto da carga de trabalho do Visual Studio) ou outra instância SQL Server
 
-# 🎯 Objetivos Educacionais | Educational Goals
-PT-BR 🇧🇷
-Compreender o fluxo de dados em um sistema web
-Aplicar o padrão MVC (Model-View-Controller)
-Desenvolver operações CRUD (Create, Read, Update, Delete)
-Utilizar Entity Framework Core com abordagem Code First
-Trabalhar com banco de dados relacional
-Introduzir conceitos básicos de autenticação via Session
+## Abrir no Visual Studio
+1. Extraia o ZIP para uma pasta normal, por exemplo `C:\Projetos\VerdeEncanto`.
+2. Abra `Esse_deu_certo_MVC_Exemplo.sln`.
+3. Aguarde a restauração dos pacotes NuGet.
+4. Execute com `F5` ou `Ctrl+F5`.
 
-EN 🇺🇸
-Understand data flow in a web system
-Apply the MVC (Model-View-Controller) pattern
-Develop CRUD (Create, Read, Update, Delete) operations
-Use Entity Framework Core with Code First approach
-Work with relational databases
-Introduce basic authentication concepts using Session
+## Abrir no Visual Studio Code
+1. Extraia o ZIP e abra a pasta `EcommerceCrudAspNetCoreMVC-main` no VS Code.
+2. No terminal integrado, execute:
 
-# 🧱 Arquitetura | Architecture
-PT-BR 🇧🇷
-O projeto segue o padrão arquitetural MVC, dividido em:
-Models → Entidades do sistema
-Controllers → Fluxo da aplicação e regras básicas
-Views → Interface com o usuário (Razor)
-Data → Contexto do banco de dados e migrations
-Helpers → Funcionalidades auxiliares (sessão)
+```powershell
+dotnet restore
+dotnet run --project Esse_deu_certo_MVC_Exemplo.csproj
+```
 
-EN 🇺🇸
-The project follows the MVC architectural pattern, structured into:
-Models → System entities
-Controllers → Application flow and basic logic
-Views → User interface (Razor)
-Data → Database context and migrations
-Helpers → Auxiliary features (session handling)
+3. Abra a URL `http://localhost:5079` (ou a URL exibida no terminal).
 
-# 🧩 Funcionalidades | Features
-🛍️ Produtos | Products
-Create
-Read
-Update
-Delete
+## Banco de dados
+O projeto usa SQL Server LocalDB por padrão, configurado em `appsettings.json`. Na primeira execução, as migrations são aplicadas e o catálogo demonstração é cadastrado. Se não tiver LocalDB, altere `ConnectionStrings:DefaultConnection` para a sua instância SQL Server.
 
-🗂️ Categorias | Categories
-Create
-Read
-Update
-Delete
+## Primeiro acesso administrativo
+Defina credenciais no terminal antes de iniciar a aplicação. Exemplo PowerShell:
 
-👤 Usuários | Users
-Registration
-Management (CRUD)
+```powershell
+$env:Admin__Email = "admin@verdeencanto.local"
+$env:Admin__Senha = "Troque-Por-Uma-Senha-Forte"
+dotnet run --project Esse_deu_certo_MVC_Exemplo.csproj
+```
 
-🔐 Administração | Administration
-Basic access control
-Session-based authentication (educational purpose)
+A aplicação cria o administrador apenas se esse e-mail ainda não existir. Não há senha administrativa fixa no código.
 
-# 🛠️ Tecnologias Utilizadas | Technologies Used
-ASP.NET Core MVC
-C#
-Entity Framework Core
-SQL Server
-Razor Views
-Bootstrap
-HTML / CSS
-JavaScript
-jQuery
+## Funcionalidades
+- Página inicial responsiva e carrossel “Nossa História” com setas, indicadores e gesto de deslizar no celular.
+- Busca de produtos no cabeçalho, catálogo com busca/filtros/ordenação e páginas de detalhes.
+- Favoritos salvos no navegador e alternância de tema claro/escuro.
+- Carrinho: adicionar, atualizar quantidade, remover item, limpar carrinho e consultar total.
+- Cadastro, login, sessão, edição de perfil e histórico de pedidos.
+- Checkout demonstrativo, registro de pedido, atualização de estoque e comprovante PDF.
+- Painel administrativo, gestão de produtos, categorias e usuários.
+- Links de localização que abrem a busca do endereço no Google Maps.
 
-# 🗄️ Banco de Dados | Database
-PT-BR 🇧🇷
-O projeto utiliza Entity Framework Core – Code First, permitindo a criação e atualização do banco de dados por meio de Migrations.
+## Observações importantes
+- Os valores, descrições e estoques do catálogo são dados demonstrativos; revise antes de usar.
+- As imagens SVG locais são ilustrações de demonstração, não fotografias oficiais dos produtos.
+- O checkout não realiza cobrança real nem se conecta a gateway de pagamento. Pix, boleto e cartão são apenas opções demonstrativas registradas no pedido.
+- E-mail de confirmação é opcional e exige configuração SMTP por variáveis de ambiente.
+- Este ambiente de criação não possui SDK .NET/SQL Server instalado, então não foi possível executar `dotnet build` ou validar a conexão com o banco aqui. A estrutura e os arquivos foram revisados, mas faça a primeira execução no Visual Studio/VS Code e confira o terminal caso o LocalDB ou algum pacote não esteja disponível.
 
-EN 🇺🇸
-The project uses Entity Framework Core – Code First, enabling database creation and updates through Migrations.
+## Solução para erro de conexão com SQL Server (Named Pipes Provider, error: 40)
 
-# 👨‍🏫 Contexto Acadêmico | Academic Context
-PT-BR 🇧🇷
-Este projeto foi desenvolvido como material didático, servindo como base para:
-Introdução ao desenvolvimento web
-Compreensão de sistemas MVC
-Prática de CRUD em aplicações reais
-Evolução incremental do código em sala de aula
+O projeto está configurado para usar `Server=(localdb)\\MSSQLLocalDB`, que exige o SQL Server Express LocalDB no Windows. O erro `SQL Server was not found or was not accessible` significa que essa instância não está instalada/iniciada ou que a conexão está configurada para outra instância. `EnableRetryOnFailure` ajuda em falhas transitórias, mas não instala nem substitui o SQL Server.
 
-EN 🇺🇸
-This project was developed as teaching material, serving as a foundation for:
-Introduction to web development
-Understanding MVC-based systems
-Practicing CRUD operations
-Incremental code evolution in the classroom
+### Opção A — instalar LocalDB (recomendado para esta base)
+1. Abra o **Visual Studio Installer**.
+2. Clique em **Modificar** na sua instalação do Visual Studio.
+3. Em **Componentes individuais**, procure e marque **SQL Server Express 2022 LocalDB** (ou o componente LocalDB disponível).
+4. Aplique a instalação e reinicie o Visual Studio.
+5. Abra o projeto e execute novamente.
 
-# 🚀 Possíveis Evoluções | Possible Improvements
-PT-BR 🇧🇷
-Camada de serviços (Service Layer)
-ViewModels / DTOs
-ASP.NET Identity
-Paginação e filtros
-API REST
-Testes unitários
+Para verificar no Prompt de Comando, execute `sqllocaldb info`. Se o comando não for reconhecido, o LocalDB não está instalado ou não está no PATH. Se a instância existir, execute `sqllocaldb start MSSQLLocalDB`.
 
-EN 🇺🇸
-Service layer implementation
-ViewModels / DTOs
-ASP.NET Identity authentication
-Pagination and filtering
-REST API
-Unit testing
+### Opção B — usar outra instância SQL Server
+Edite `ConnectionStrings:DefaultConnection` em `appsettings.json` para apontar ao nome real da sua instância. Não altere para um nome de servidor fictício.
 
-# 📄 Licença | License
-PT-BR 🇧🇷
-Projeto de uso exclusivamente educacional.
-
-EN 🇺🇸
-Project intended exclusively for educational purposes.
-
-# 👨‍💻 Autor | Author
-Renan Rodrigues
-IT Manager | Software Developer
-Instructor of Professional Education III – SENAI SP
-Areas: Education, Systems Development, Cloud Computing and AI
+O aviso sobre `Venda.ValorTotal` também foi corrigido no modelo com precisão `18,2`. A aplicação ainda precisa de uma instância SQL Server acessível para criar/aplicar as migrations e salvar produtos, usuários e pedidos.
