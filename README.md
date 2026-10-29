@@ -1,50 +1,130 @@
-🛒 Projeto Acadêmico – CRUD de E-commerce (ASP.NET Core MVC) | 🛒 Projeto Acadêmico – E-commerce CRUD (ASP.NET Core MVC)
-📘 Sobre o Projeto | Sobre o Projeto
-PT-BR 🇧🇷 Este projeto consiste em um CRUD simples de E-commerce, desenvolvido com ASP.NET Core MVC, com finalidade exclusivamente educacional. Ele foi aplicado em sala de aula para alunos do curso técnico em Desenvolvimento de Sistemas, com o objetivo de apresentar, de forma prática, o fluxo básico de funcionamento de um sistema de E-commerce. O foco do projeto é didático, auxiliando os alunos a compreenderem conceitos fundamentais utilizados em sistemas web reais.
+# 🛒 Projeto Acadêmico – CRUD de E-commerce (ASP.NET Core MVC) | 🛒 Academic Project – E-commerce CRUD (ASP.NET Core MVC)
 
-Este projeto consiste em uma aplicação CRUD simples de comércio eletrônico, desenvolvida em ASP.NET Core MVC, com fins exclusivamente educacionais. Foi aplicado em sala de aula para alunos de um curso técnico em Desenvolvimento de Sistemas, com o objetivo de demonstrar, na prática, o fluxo de trabalho básico de um sistema de comércio eletrônico. O projeto tem um foco didático, auxiliando os alunos na compreensão de conceitos fundamentais utilizados em sistemas web reais.
+# 📘 Sobre o Projeto | About the Project
+PT-BR 🇧🇷
+Este projeto consiste em um CRUD simples de E-commerce, desenvolvido com ASP.NET Core MVC, com finalidade exclusivamente educacional.
+Ele foi aplicado em sala de aula para alunos do curso técnico em Desenvolvimento de Sistemas, com o objetivo de apresentar, de forma prática, o fluxo básico de funcionamento de um sistema de E-commerce.
+O foco do projeto é didático, auxiliando os alunos a compreenderem conceitos fundamentais utilizados em sistemas web reais.
 
-🎯 Objetivos Educacionais | Metas Educacionais
-PT-BR 🇧🇷 Compreender o fluxo de dados em um sistema web Aplicar o padrão MVC (Model-View-Controller) Desenvolver operações CRUD (Create, Read, Update, Delete) Utilização Entity Framework Core com abordagem Code First Trabalhar com banco de dados relacional Introduzir conceitos básicos de autenticação via Session
+EN 🇺🇸
+This project consists of a simple E-commerce CRUD application, developed using ASP.NET Core MVC, with an educational purpose only.
+It was applied in the classroom for students of a Technical Program in Systems Development, aiming to demonstrate, in practice, the basic workflow of an E-commerce system.
+The project has a didactic focus, helping students understand fundamental concepts used in real-world web systems.
 
-PT 🇺🇸 Compreender o fluxo de dados em um sistema web. Aplicar o padrão MVC (Model-View-Controller). Desenvolver operações CRUD (Criar, Ler, Atualizar, Deletar). Utilizar o Entity Framework Core com a abordagem Code First. Trabalhar com bancos de dados relacionais. Introduzir conceitos básicos de autenticação utilizando Sessão.
+# 🎯 Objetivos Educacionais | Educational Goals
+PT-BR 🇧🇷
+Compreender o fluxo de dados em um sistema web
+Aplicar o padrão MVC (Model-View-Controller)
+Desenvolver operações CRUD (Create, Read, Update, Delete)
+Utilizar Entity Framework Core com abordagem Code First
+Trabalhar com banco de dados relacional
+Introduzir conceitos básicos de autenticação via Session
 
-🧱 Arquitetura | Arquitetura
-PT-BR 🇧🇷 O projeto segue o padrão arquitetural MVC, dividido em: Models → Entidades do sistema Controllers → Fluxo da aplicação e regras básicas Views → Interface com o usuário (Razor) Data → Contexto do banco de dados e migrações Helpers → Funcionalidades auxiliares (sessão)
+EN 🇺🇸
+Understand data flow in a web system
+Apply the MVC (Model-View-Controller) pattern
+Develop CRUD (Create, Read, Update, Delete) operations
+Use Entity Framework Core with Code First approach
+Work with relational databases
+Introduce basic authentication concepts using Session
 
-O projeto segue o padrão arquitetural MVC, estruturado em: Modelos → Entidades do sistema; Controladores → Fluxo da aplicação e lógica básica; Visões → Interface do usuário (Razor); Dados → Contexto do banco de dados e migrações; Auxiliares → Funcionalidades auxiliares (gerenciamento de sessão).
+# 🧱 Arquitetura | Architecture
+PT-BR 🇧🇷
+O projeto segue o padrão arquitetural MVC, dividido em:
+Models → Entidades do sistema
+Controllers → Fluxo da aplicação e regras básicas
+Views → Interface com o usuário (Razor)
+Data → Contexto do banco de dados e migrations
+Helpers → Funcionalidades auxiliares (sessão)
 
-🧩 Funcionalidades | Características
-🛍️ Produtos | Criar Ler Atualizar Excluir
+EN 🇺🇸
+The project follows the MVC architectural pattern, structured into:
+Models → System entities
+Controllers → Application flow and basic logic
+Views → User interface (Razor)
+Data → Database context and migrations
+Helpers → Auxiliary features (session handling)
 
-🗂️ Categorias | Categorias Criar Ler Atualizar Excluir
+# 🧩 Funcionalidades | Features
+🛍️ Produtos | Products
+Create
+Read
+Update
+Delete
 
-👤 Usuários | Gerenciamento de registro de usuários (CRUD)
+🗂️ Categorias | Categories
+Create
+Read
+Update
+Delete
 
-🔐 Administração | Administração Controle de acesso básico Autenticação baseada em sessão (para fins educacionais)
+👤 Usuários | Users
+Registration
+Management (CRUD)
 
-🛠️ Tecnologias Utilizadas | Tecnologias Utilizadas
-ASP.NET Core MVC, C#, Entity Framework Core, SQL Server, Razor Views, Bootstrap, HTML/CSS, JavaScript, jQuery
+🔐 Administração | Administration
+Basic access control
+Session-based authentication (educational purpose)
 
-🗄️ Banco de Dados | Banco de dados
-PT-BR 🇧🇷 O projeto utiliza Entity Framework Core – Code First, permitindo a criação e atualização do banco de dados por meio de Migrations.
+# 🛠️ Tecnologias Utilizadas | Technologies Used
+ASP.NET Core MVC
+C#
+Entity Framework Core
+SQL Server
+Razor Views
+Bootstrap
+HTML / CSS
+JavaScript
+jQuery
 
-PT 🇺🇸 O projeto utiliza o Entity Framework Core – Code First, permitindo a criação e atualização de bancos de dados por meio de Migrations.
+# 🗄️ Banco de Dados | Database
+PT-BR 🇧🇷
+O projeto utiliza Entity Framework Core – Code First, permitindo a criação e atualização do banco de dados por meio de Migrations.
 
-👨‍🏫 Contexto Acadêmico | Contexto Acadêmico
-PT-BR 🇧🇷 Este projeto foi desenvolvido como material didático, fornecido como base para: Introdução ao desenvolvimento web Compreensão de sistemas MVC Prática de CRUD em aplicações reais Evolução incremental do código em sala de aula
+EN 🇺🇸
+The project uses Entity Framework Core – Code First, enabling database creation and updates through Migrations.
 
-PT 🇺🇸 Este projeto foi desenvolvido como material didático, servindo como base para: Introdução ao desenvolvimento web; Compreensão de sistemas baseados em MVC; Prática de operações CRUD; Evolução incremental de código em sala de aula.
+# 👨‍🏫 Contexto Acadêmico | Academic Context
+PT-BR 🇧🇷
+Este projeto foi desenvolvido como material didático, servindo como base para:
+Introdução ao desenvolvimento web
+Compreensão de sistemas MVC
+Prática de CRUD em aplicações reais
+Evolução incremental do código em sala de aula
 
-🚀 Possíveis Evoluções | Possíveis melhorias
-PT-BR 🇧🇷 Camada de serviços (Service Layer) ViewModels / DTOs ASP.NET Identity Paginação e filtros API REST Testes unitários
+EN 🇺🇸
+This project was developed as teaching material, serving as a foundation for:
+Introduction to web development
+Understanding MVC-based systems
+Practicing CRUD operations
+Incremental code evolution in the classroom
 
-PT 🇺🇸 Implementação da camada de serviço ViewModels / DTOs Autenticação de identidade ASP.NET Paginação e filtragem API REST Testes unitários
+# 🚀 Possíveis Evoluções | Possible Improvements
+PT-BR 🇧🇷
+Camada de serviços (Service Layer)
+ViewModels / DTOs
+ASP.NET Identity
+Paginação e filtros
+API REST
+Testes unitários
 
-📄 Licença | Licença
-PT-BR 🇧🇷 Projeto de uso exclusivamente educacional.
+EN 🇺🇸
+Service layer implementation
+ViewModels / DTOs
+ASP.NET Identity authentication
+Pagination and filtering
+REST API
+Unit testing
 
-PT 🇺🇸 Projeto destinado exclusivamente a fins educativos.
+# 📄 Licença | License
+PT-BR 🇧🇷
+Projeto de uso exclusivamente educacional.
 
-👨‍💻 Autor | Autor
-Renan Rodrigues Gerente de TI | Desenvolvedor de Software Instrutor de Educação Profissional III – SENAI SP Áreas: Educação, Desenvolvimento de Sistemas, Computação em Nuvem e IA
+EN 🇺🇸
+Project intended exclusively for educational purposes.
+
+# 👨‍💻 Autor | Author
+Renan Rodrigues
+IT Manager | Software Developer
+Instructor of Professional Education III – SENAI SP
+Areas: Education, Systems Development, Cloud Computing and AI
