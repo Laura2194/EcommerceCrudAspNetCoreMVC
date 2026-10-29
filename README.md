@@ -1,75 +1,176 @@
-[README.md](https://github.com/user-attachments/files/34107578/README.md)
-# Verde Encanto — E-commerce ASP.NET Core MVC
+# 🌿 Verde Encanto – E-commerce de Cosméticos Naturais (ASP.NET Core MVC) | 🌿 Natural Cosmetics E-commerce
 
-Projeto criado a partir da base de e-commerce ASP.NET Core MVC fornecida pelo professor. A solução preserva a estrutura MVC, os modelos, os controladores, o Entity Framework Core e o SQL Server, com a identidade visual Verde Encanto baseada nas referências enviadas.
+# 📘 Sobre o Projeto | About the Project
 
-## Requisitos
-- .NET 9 SDK (o projeto original usa `net9.0`)
-- Visual Studio 2022 atualizado com a carga de trabalho **Desenvolvimento ASP.NET e Web**; ou Visual Studio Code com as extensões **C# Dev Kit** e **C#**
-- SQL Server LocalDB (instalado normalmente junto da carga de trabalho do Visual Studio) ou outra instância SQL Server
+**PT-BR 🇧🇷** O Verde Encanto é um projeto acadêmico de E-commerce desenvolvido com ASP.NET Core MVC e C#, voltado à comercialização de cosméticos naturais. O sistema foi desenvolvido com finalidade educacional, buscando aplicar na prática conceitos de desenvolvimento web, arquitetura MVC, persistência de dados e funcionalidades comuns em lojas virtuais. A aplicação reúne recursos de navegação pelo catálogo de produtos, carrinho de compras, finalização de pedidos, cadastro e autenticação de usuários, além de funcionalidades administrativas.
 
-## Abrir no Visual Studio
-1. Extraia o ZIP para uma pasta normal, por exemplo `C:\Projetos\VerdeEncanto`.
-2. Abra `Esse_deu_certo_MVC_Exemplo.sln`.
-3. Aguarde a restauração dos pacotes NuGet.
-4. Execute com `F5` ou `Ctrl+F5`.
+**EN 🇺🇸** Verde Encanto is an academic e-commerce project developed with ASP.NET Core MVC and C#, focused on the sale of natural cosmetics. The system was created for educational purposes, aiming to apply web development concepts, MVC architecture, data persistence, and common e-commerce functionalities. The application includes product catalog browsing, a shopping cart, order checkout, user registration and authentication, and administrative features.
 
-## Abrir no Visual Studio Code
-1. Extraia o ZIP e abra a pasta `EcommerceCrudAspNetCoreMVC-main` no VS Code.
-2. No terminal integrado, execute:
+# 🎯 Objetivos Educacionais | Educational Goals
 
-```powershell
+**PT-BR 🇧🇷**
+- Compreender o fluxo de dados em uma aplicação web.
+- Aplicar o padrão MVC (Model-View-Controller).
+- Desenvolver funcionalidades de catálogo e gerenciamento de produtos.
+- Implementar carrinho de compras e fluxo de finalização de pedidos.
+- Utilizar Entity Framework Core com abordagem Code First e Migrations.
+- Trabalhar com banco de dados relacional SQL Server.
+- Aplicar conceitos básicos de autenticação e gerenciamento de sessões.
+- Desenvolver interfaces web com Razor, HTML, CSS e JavaScript.
+
+**EN 🇺🇸**
+- Understand data flow in a web application.
+- Apply the MVC (Model-View-Controller) pattern.
+- Develop product catalog and management features.
+- Implement a shopping cart and order checkout workflow.
+- Use Entity Framework Core with the Code First approach and Migrations.
+- Work with a SQL Server relational database.
+- Apply basic authentication and session management concepts.
+- Develop web interfaces using Razor, HTML, CSS, and JavaScript.
+
+# 🧱 Arquitetura | Architecture
+
+**PT-BR 🇧🇷** O projeto segue o padrão arquitetural MVC, organizado nas seguintes áreas:
+
+- **Models:** entidades e estruturas de dados do sistema.
+- **Controllers:** controle do fluxo da aplicação e implementação das regras de negócio.
+- **Views:** interfaces com o usuário utilizando Razor.
+- **Data:** contexto do banco de dados e gerenciamento de Migrations.
+- **Helpers:** funcionalidades auxiliares utilizadas pela aplicação.
+
+**EN 🇺🇸** The project follows the MVC architectural pattern and is organized into the following areas:
+
+- **Models:** system entities and data structures.
+- **Controllers:** application flow control and business logic.
+- **Views:** user interfaces built with Razor.
+- **Data:** database context and migration management.
+- **Helpers:** auxiliary application functionality.
+
+# 🧩 Funcionalidades | Features
+
+### 🛍️ Catálogo de Produtos | Product Catalog
+- Visualização dos produtos disponíveis.
+- Exibição de informações e detalhes dos produtos.
+- Organização e navegação pelo catálogo.
+
+### 🛒 Carrinho de Compras | Shopping Cart
+- Adição de produtos ao carrinho.
+- Visualização e gerenciamento dos itens selecionados.
+- Preparação dos itens para finalização do pedido.
+
+### 📦 Pedidos | Orders
+- Fluxo de finalização de pedidos.
+- Registro das informações da compra.
+- Consulta ao histórico de pedidos do usuário.
+
+### 👤 Usuários | Users
+- Cadastro de usuários.
+- Login e autenticação.
+- Gerenciamento de informações do perfil.
+- Consulta ao histórico de compras.
+
+### ⚙️ Administração | Administration
+- Funcionalidades administrativas para gerenciamento da loja.
+- Controle básico de acesso às funcionalidades administrativas.
+
+### ❤️ Favoritos e Personalização | Favorites and Customization
+- Recursos de favoritos.
+- Opção de personalização visual da interface.
+
+# 🛠️ Tecnologias Utilizadas | Technologies Used
+
+- C#
+- ASP.NET Core MVC
+- .NET 9
+- Entity Framework Core
+- SQL Server LocalDB
+- Razor Views
+- HTML5
+- CSS3
+- JavaScript
+- Bootstrap
+- jQuery
+
+# 🗄️ Banco de Dados | Database
+
+**PT-BR 🇧🇷** O projeto utiliza Entity Framework Core com a abordagem Code First, permitindo gerenciar a estrutura do banco de dados por meio de Migrations. A aplicação está configurada para utilizar o SQL Server LocalDB em ambiente de desenvolvimento. A inicialização do sistema executa as Migrations para criar ou atualizar a estrutura do banco e, em seguida, realiza a inicialização do catálogo de produtos.
+
+**EN 🇺🇸** The project uses Entity Framework Core with the Code First approach, allowing the database schema to be managed through Migrations. The application is configured to use SQL Server LocalDB in the development environment. During startup, the application runs the Migrations to create or update the database schema and then initializes the product catalog.
+
+# 🚀 Como Executar o Projeto | How to Run the Project
+
+**PT-BR 🇧🇷**
+
+1. Instale o SDK do .NET 9.
+2. Instale e configure o SQL Server Express LocalDB.
+3. Abra a pasta do projeto no Visual Studio ou no Visual Studio Code.
+4. Confira a string de conexão `DefaultConnection` no arquivo `appsettings.json`.
+5. Abra o terminal na pasta que contém o arquivo `.csproj`.
+6. Execute os comandos:
+
+```bash
 dotnet restore
-dotnet run --project Esse_deu_certo_MVC_Exemplo.csproj
+dotnet run
 ```
 
-3. Abra a URL `http://localhost:5079` (ou a URL exibida no terminal).
+7. Acesse no navegador o endereço local exibido no terminal.
 
-## Banco de dados
-O projeto usa SQL Server LocalDB por padrão, configurado em `appsettings.json`. Na primeira execução, as migrations são aplicadas e o catálogo demonstração é cadastrado. Se não tiver LocalDB, altere `ConnectionStrings:DefaultConnection` para a sua instância SQL Server.
+**EN 🇺🇸**
 
-## Primeiro acesso administrativo
-Defina credenciais no terminal antes de iniciar a aplicação. Exemplo PowerShell:
+1. Install the .NET 9 SDK.
+2. Install and configure SQL Server Express LocalDB.
+3. Open the project folder in Visual Studio or Visual Studio Code.
+4. Check the `DefaultConnection` connection string in `appsettings.json`.
+5. Open a terminal in the folder containing the `.csproj` file.
+6. Run the following commands:
 
-```powershell
-$env:Admin__Email = "admin@verdeencanto.local"
-$env:Admin__Senha = "Troque-Por-Uma-Senha-Forte"
-dotnet run --project Esse_deu_certo_MVC_Exemplo.csproj
+```bash
+dotnet restore
+dotnet run
 ```
 
-A aplicação cria o administrador apenas se esse e-mail ainda não existir. Não há senha administrativa fixa no código.
+7. Open the local address displayed in the terminal in your browser.
 
-## Funcionalidades
-- Página inicial responsiva e carrossel “Nossa História” com setas, indicadores e gesto de deslizar no celular.
-- Busca de produtos no cabeçalho, catálogo com busca/filtros/ordenação e páginas de detalhes.
-- Favoritos salvos no navegador e alternância de tema claro/escuro.
-- Carrinho: adicionar, atualizar quantidade, remover item, limpar carrinho e consultar total.
-- Cadastro, login, sessão, edição de perfil e histórico de pedidos.
-- Checkout demonstrativo, registro de pedido, atualização de estoque e comprovante PDF.
-- Painel administrativo, gestão de produtos, categorias e usuários.
-- Links de localização que abrem a busca do endereço no Google Maps.
+**Observação | Note:** A execução depende de uma conexão funcional com o SQL Server LocalDB. Se ocorrer um erro de conexão durante a inicialização, verifique se a instância está em execução e se a configuração do banco está correta.
 
-## Observações importantes
-- Os valores, descrições e estoques do catálogo são dados demonstrativos; revise antes de usar.
-- As imagens SVG locais são ilustrações de demonstração, não fotografias oficiais dos produtos.
-- O checkout não realiza cobrança real nem se conecta a gateway de pagamento. Pix, boleto e cartão são apenas opções demonstrativas registradas no pedido.
-- E-mail de confirmação é opcional e exige configuração SMTP por variáveis de ambiente.
-- Este ambiente de criação não possui SDK .NET/SQL Server instalado, então não foi possível executar `dotnet build` ou validar a conexão com o banco aqui. A estrutura e os arquivos foram revisados, mas faça a primeira execução no Visual Studio/VS Code e confira o terminal caso o LocalDB ou algum pacote não esteja disponível.
+# 👨‍🏫 Contexto Acadêmico | Academic Context
 
-## Solução para erro de conexão com SQL Server (Named Pipes Provider, error: 40)
+**PT-BR 🇧🇷** O Verde Encanto foi desenvolvido como projeto acadêmico para aplicar conhecimentos de desenvolvimento de sistemas e demonstrar, na prática, a estrutura e o funcionamento de uma aplicação de E-commerce. O projeto permite estudar arquitetura MVC, persistência de dados, gerenciamento de usuários e implementação de funcionalidades comuns em uma loja virtual.
 
-O projeto está configurado para usar `Server=(localdb)\\MSSQLLocalDB`, que exige o SQL Server Express LocalDB no Windows. O erro `SQL Server was not found or was not accessible` significa que essa instância não está instalada/iniciada ou que a conexão está configurada para outra instância. `EnableRetryOnFailure` ajuda em falhas transitórias, mas não instala nem substitui o SQL Server.
+**EN 🇺🇸** Verde Encanto was developed as an academic project to apply systems development knowledge and demonstrate the structure and operation of an e-commerce application. It provides a practical opportunity to study MVC architecture, data persistence, user management, and common online store functionalities.
 
-### Opção A — instalar LocalDB (recomendado para esta base)
-1. Abra o **Visual Studio Installer**.
-2. Clique em **Modificar** na sua instalação do Visual Studio.
-3. Em **Componentes individuais**, procure e marque **SQL Server Express 2022 LocalDB** (ou o componente LocalDB disponível).
-4. Aplique a instalação e reinicie o Visual Studio.
-5. Abra o projeto e execute novamente.
+# 🚀 Possíveis Evoluções | Possible Improvements
 
-Para verificar no Prompt de Comando, execute `sqllocaldb info`. Se o comando não for reconhecido, o LocalDB não está instalado ou não está no PATH. Se a instância existir, execute `sqllocaldb start MSSQLLocalDB`.
+**PT-BR 🇧🇷**
+- Implementação do ASP.NET Core Identity.
+- Criação de uma camada de serviços (Service Layer).
+- Utilização de ViewModels e DTOs.
+- Implementação de filtros, pesquisa e paginação.
+- Integração com gateways de pagamento.
+- Desenvolvimento de uma API REST.
+- Implementação de testes automatizados.
+- Melhorias na segurança e no controle de acesso.
+- Aprimoramento da compatibilidade dos pacotes utilizados com o .NET 9.
 
-### Opção B — usar outra instância SQL Server
-Edite `ConnectionStrings:DefaultConnection` em `appsettings.json` para apontar ao nome real da sua instância. Não altere para um nome de servidor fictício.
+**EN 🇺🇸**
+- Implementation of ASP.NET Core Identity.
+- Creation of a Service Layer.
+- Use of ViewModels and DTOs.
+- Implementation of filters, search, and pagination.
+- Integration with payment gateways.
+- Development of a REST API.
+- Implementation of automated tests.
+- Improvements to security and access control.
+- Better compatibility between the packages used and .NET 9.
 
-O aviso sobre `Venda.ValorTotal` também foi corrigido no modelo com precisão `18,2`. A aplicação ainda precisa de uma instância SQL Server acessível para criar/aplicar as migrations e salvar produtos, usuários e pedidos.
+# 📄 Licença | License
+
+**PT-BR 🇧🇷** Projeto de uso exclusivamente educacional.
+
+**EN 🇺🇸** Project intended exclusively for educational purposes.
+
+# 👨‍💻 Autor | Author
+
+**Verde Encanto — Projeto Acadêmico de E-commerce**
+
+Desenvolvido para fins educacionais, com foco em desenvolvimento web utilizando ASP.NET Core MVC e C#.
